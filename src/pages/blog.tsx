@@ -63,7 +63,7 @@ export function BlogAll() {
 
 export function BlogSome() {
   const server = useGlobalContext();
-  const someBlog = server?.slice(0, 2)
+  const someBlog = server?.slice(0, 3)
   const data = someBlog?.map((items, index) => {
     const readTime = items.content;
     let min = 1;
