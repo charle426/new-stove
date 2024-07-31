@@ -29,7 +29,7 @@ function App() {
             <Route path="bill-payments" element={<BillPayment />} />
             <Route path="careers" element={<Careers />} />
             <Route path="fleet-delivery" element={<FleetPage />} />
-            <Route path="partnership" element={<PartnerShipPage />} />
+            <Route path="investment" element={<PartnerShipPage />} />
             <Route path="emergency-services" element={<RescuePage />} />
             <Route path="about-us" element={<AboutPage />} />
             <Route path="blog" element={<BlogPage />} />

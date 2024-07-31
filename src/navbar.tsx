@@ -145,7 +145,7 @@ export default function Navbar() {
                   Fleet Delivery
                 </NavLink>
                 <NavLink
-                  to="Investment"
+                  to="investment"
                   className={({ isActive }) =>
                     isActive
                       ? "text-primary font-medium text-[0.9rem]"

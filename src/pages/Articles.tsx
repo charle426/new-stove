@@ -1,4 +1,4 @@
-// import { doc, getDoc } from "firebase/firestore"
+// import { doc, getDoc, DocumentData } from "firebase/firestore"
 // import {Suspense, useEffect, useState} from "react"
 // import {useParams} from "react-router-dom"
 // import { db } from "../firebaseConfig"
@@ -12,7 +12,7 @@
 //     file: string;
 //     uploadTime: Date;
 //   }[];
-//   const [blog, setBlog] = useState<BlogProp | null>(null)
+//   const [blog, setBlog] = useState<DocumentData | undefined>(undefined)
 //     useEffect(() => {
 //       const blog = doc(db, "blogs", id)
 //         const fetchData = async() => {
