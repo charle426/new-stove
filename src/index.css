@@ -1,0 +1,146 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 234, 86%, 60%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 254 100% 90.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 0, 0%, 95%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.3rem;
+    --deep: 243, 17%, 22%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+     --primary: 234, 86%, 60%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+    --deep: 0, 0%, 95%;
+  }
+}
+
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  .stickyNav{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hero-heading{
+  background: linear-gradient(45deg, hsl(0, 0%, 83%), hsl(234, 86%, 60%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -moz-background-clip: text;
+}
+.why-heading{
+  background: linear-gradient(to bottom, hsl(var(--primary)) 30%, transparent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -moz-background-clip: text;
+  }
+.fleet-heading{
+  background: linear-gradient(45deg, hsl(48, 52%, 80%), hsl(48.1 89.2% 56.3%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -moz-background-clip: text;
+  /* background-image: url(./assets/cpg-card__discover-01_2x.jpeg); */
+}
+
+.inview{
+  animation: fadeIn 1s  0s 1;
+  /* border-radius: 50px; */ 
+    background: linear-gradient(45deg,  #4154F1, hsl(240 4.8% 95.9%));
+}
+.rescue{
+  animation: fadeIn 1s  0s 1;
+  /* border-radius: 50px; */ 
+    background: linear-gradient(45deg,  hsl(0, 83%, 50%), hsl(240 4.8% 95.9%));
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0.3;
+    /* transform: translateY(50px); */
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auto-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.faqActive{
+  height: auto;
+  transition: all 0.3s;
+}
+
+.fuel-service{
+   background: linear-gradient(to bottom,  hsl(217, 83%, 50%) 60%, transparent );
+}
+.lpg-service{
+   background: linear-gradient(to bottom,  hsl(132, 83%, 50%) 60%, transparent );
+}
+.diesel-service{
+   background: linear-gradient(to bottom,  hsl(65, 83%, 50%) 60%, transparent );
+}
+.kero-service{
+   background: linear-gradient(to bottom,  #91e916 60%, transparent );
+}
+.engine-service{
+   background: linear-gradient(to bottom,  #576247 60%, transparent );
+}
+
+h1, h2,h3,h4,h5,h6{
+  scroll-margin: 5rem;
+  letter-spacing: -0.025em;
+}
