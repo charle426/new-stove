@@ -1,6 +1,6 @@
 // Context.tsx
 import React, { useContext, } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, DocumentData, getDocs } from "firebase/firestore";
 import { db } from "../firebaseConfig";
       type ValueProp = {
         title: string;
@@ -24,7 +24,7 @@ export default function Context({ children }: ContextProp) {
       const fetchData = async () => {
         const data = await getDocs(blogsCollection);
         return setServer(
-          data.docs.map((doc) => ({
+          data.docs.map((doc: DocumentData) => ({
             id: doc.id,
             title: doc.data().title,
             content: doc.data().content,
