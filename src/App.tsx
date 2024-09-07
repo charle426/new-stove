@@ -14,8 +14,13 @@ import PartnerShipPage from "./pages/partnershipPage.tsx"
 import RescuePage from "./pages/RescuePage.tsx"
 import AboutPage from "./pages/about.tsx"
 import BlogPage from "./pages/blogPage.tsx";
-// import Articles from "./pages/Articles.tsx";
+import Articles from "./pages/Articles.tsx";
+import { useState } from "react";
+import Admin from "./pages/admin.tsx";
+import AdminLogin from "./pages/adminLogin.tsx";
+import Edit from "./pages/Edit.tsx";
 function App() {
+   const [adminAuth, setAdminAuth] = useState<boolean | null>(false);
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <BrowserRouter>
@@ -33,8 +38,20 @@ function App() {
             <Route path="emergency-services" element={<RescuePage />} />
             <Route path="about-us" element={<AboutPage />} />
             <Route path="blog" element={<BlogPage />} />
-            {/* <Route path="blog:id" element={<Articles />} /> */}
-           </Route>
+            <Route path="blog/:id" element={<Articles />} />
+            <Route
+              path="blog/stove/admin/234813649"
+              element={<Admin adminAuth={adminAuth} />}
+            />
+            <Route
+              path="blog/admin/edit/:id"
+              element={<Edit />}
+            />
+            <Route
+              path="blog/admin/login"
+              element={<AdminLogin setAdminAuth={setAdminAuth} />}
+            />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

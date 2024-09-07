@@ -14,10 +14,7 @@ export default function AnAppForYou() {
               The everything app for your car
             </p>
             <p>
-              Fuel delivery, car wash, servicing and more – just tap and we’ll
-              roll to wherever you are. I mean, who still goes to the petrol
-              station or the garage for vehicle services anymore? It’s 2024 –
-              where STOVE comes to you.
+              Fuel, Gas Refill, Waste Disposal, Cargo, Logistics, Bill Payment, Flight Booking and more - just tap and we'll roll to wherever you are. I mean, who still goes to the gas station or dump sites to dispose wate anymore? its 2024 and STOVE has come!
             </p>
             <div className="max-w-[250px]">
 

@@ -15,7 +15,7 @@ import engineOil from "../assets/3D-icon-web__engine-oil.png";
 import rescue from "../assets/3D-icon-web__emergency.png";
 import insurance from "../assets/3D-icon-web__insurance.png";
 import wash from "../assets/3D-icon-web__car-wash.png";
-import tyreChange from "../assets/3D-icon-web__tyre-change.png";
+import tyreChange from "../assets/A_Friendly_Shipping_Guy_Cartoon.svg";
 import emergenceBattery from "../assets/emergency-card-web__battery_2x.png"
 import emergenceFuel from "../assets/emergency-card-web__fuel_2x.png"
 import emergenceTyre from "../assets/emergency-card-web__tyre_2x.png"
@@ -89,7 +89,7 @@ export function Services() {
               <p className="text-[0.8rem]">Fuel</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
               onClick={() => handleScroll(document.querySelector("#second"))}
             >
               <img
@@ -97,10 +97,10 @@ export function Services() {
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
               />
-              <p className="text-[0.8rem]">Engine Oil</p>
+              <p className="text-[0.8rem]">Pay Bills</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
               onClick={() => handleScroll(document.querySelector("#third"))}
             >
               <img
@@ -108,21 +108,21 @@ export function Services() {
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
               />
-              <p className="text-[0.8rem]">Car Wash</p>
+              <p className="text-[0.8rem]">Waste Disposal</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="flex flex-col items-center justify-center bg-accent py-2 px-3"
               onClick={() => handleScroll(document.querySelector("#four"))}
             >
               <img
                 src={tyreChange}
                 alt="icon"
-                className="max-w-[60px] md:max-w-[100px]"
+                className="max-w-[60px] md:max-w-[80px]"
               />
-              <p className="text-[0.8rem]">Tyre</p>
+              <p className="text-[0.8rem]">Shipping</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
               onClick={() => handleScroll(document.querySelector("#five"))}
             >
               <img
@@ -133,7 +133,7 @@ export function Services() {
               <p className="text-[0.8rem]">Insurance</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
               onClick={() => handleScroll(document.querySelector("#six"))}
             >
               <img
@@ -190,7 +190,7 @@ export function EmergenceServices() {
               <p className="text-[0.8rem]">Fuel</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
               onClick={() => handleScroll(document.querySelector("#emergenceSecond"))}
             >
               <img
@@ -201,7 +201,7 @@ export function EmergenceServices() {
               <p className="text-[0.8rem]">Punctured Tyre</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent"
+              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
               onClick={() => handleScroll(document.querySelector("#emergenceThird"))}
             >
               <img

@@ -25,9 +25,11 @@ function Fuel(props: { classString: string; src: string }) {
               price as the petrol station. Yep – you heard it right.
             </p>
             <div>
-              <Button variant={"outline"} className="rounded-2xl mt-7">
-                Discover Fuel Delivery
-              </Button>
+              <Link to="petroleum-delivery">
+                <Button variant={"outline"} className="rounded-2xl mt-7">
+                  Request Service
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
@@ -52,16 +54,18 @@ function EngineOil(props: { classString: string; src: string }) {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div>
             <h1 className="text-[2rem] font-semibold text-[#eeffef] md:text-[3.5rem]">
-              Engine oil with free 10-point check
+              Pay Bills, Buy Airtime and Data.
             </h1>
             <p>
-              Mobile oil change, free 10-point check & original filter
-              replacement. Your car deserves the best.
+              We can't stop the bills from coming, but we an make paying them as
+              easy as possible
             </p>
             <div>
-              <Button variant={"outline"} className="rounded-2xl mt-7">
-                Discover Engine Oil
-              </Button>
+              <Link to="bill-payments">
+                <Button variant={"outline"} className="rounded-2xl mt-7">
+                  Request Service
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
@@ -86,16 +90,19 @@ function CarWash(props: { classString: string; src: string }) {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div>
             <h1 className="text-[2rem] font-semibold text-[#eeffef] md:text-[3.5rem]">
-              Rise and shine. Your car deserves a spa day too.
+              Rise and shine. Your environment deserves a spa day too.
             </h1>
             <p>
-              Give your ride the glow it’s worthy of. Allow our specialist car
-              wash team to come to you and sparkle up your day
+              Don't let four odour or smelly trash disturb your convenience. Let
+              our professional trashers come to you and dispose your domestic,
+              industrial and electronic waste.
             </p>
             <div>
-              <Button variant={"outline"} className="rounded-2xl mt-7">
-                Discover Car Wash
-              </Button>
+              <Link to="waste-disposal">
+                <Button variant={"outline"} className="rounded-2xl mt-7">
+                  Request Service
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
@@ -121,16 +128,20 @@ function Tyre(props: { classString: string; src: string }) {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div>
             <h1 className="text-[2rem] font-semibold text-[#eeffef] md:text-[3.5rem]">
-              Tired tyres? We’ll upgrade your tread today.
+              SHIP AND CHILL. Do life and business with ease.
             </h1>
             <p>
-              Avoid pointless trips to the garage when we can treat your ride to
-              something fresh at your doorstep.
+              Deliveries becomes easier when we handle your international
+              shipping - our sea and air freight with swift door-to-door
+              deliveries to your client will wow you, while we offer the same
+              day domestic deliveries
             </p>
             <div>
-              <Button variant={"outline"} className="rounded-2xl mt-7">
-                Discover tyre change
-              </Button>
+              <Link to="shipping">
+                <Button variant={"outline"} className="rounded-2xl mt-7">
+                  Request Service
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
@@ -162,9 +173,11 @@ function Insurance(props: { classString: string; src: string }) {
               It’s not worth the risk – get the best car cover on the streets.
             </p>
             <div>
-              <Button variant={"outline"} className="rounded-2xl mt-7">
-                Discover Insurance
-              </Button>
+              <Link to="investment">
+                <Button variant={"outline"} className="rounded-2xl mt-7">
+                  Request Service
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
@@ -190,14 +203,13 @@ function Rescue(props: { classString: string; src: string }) {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div>
             <h1 className="text-[2rem] font-semibold text-[#eeffef] md:text-[3.5rem]">
-              Stuck at the roadside? No sweat.
+              Stuck with life threatening hazards and risks? No sweat.
             </h1>
             <p>
-              Ran out of fuel? Got a puncture? Battery died? Need a tow? Just
-              STOVE it and we’ll be to you in minutes.
+              Feel free to tap our emergence and safety tab for what to do
             </p>
             <div>
-              <Link to="rescue">
+              <Link to="emergence-services">
                 <Button variant={"destructive"} className="rounded-2xl mt-7">
                   Rescue
                 </Button>

@@ -12,7 +12,7 @@ export default function BusinessStove() {
             </h1>
             <div className="flex items-center gap-3">
               <Link to="fleet">
-                <Button className="font-medium rounded-xl" variant={"outline"}>Fleet Services</Button>
+                <Button className="font-medium rounded-xl" variant={"outline"}>Invest with Us</Button>
               </Link>
               <Link to="partnership">
                 <Button className="font-medium rounded-xl" variant={"outline"}>Become a Partner</Button>

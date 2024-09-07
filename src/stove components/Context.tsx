@@ -1,21 +1,27 @@
 // Context.tsx
 import React, { useContext, } from "react";
-import { collection, DocumentData, getDocs } from "firebase/firestore";
+import { collection, DocumentData, getDocs,} from "firebase/firestore";
 import { db } from "../firebaseConfig";
       type ValueProp = {
+        id: string;
         title: string;
         content: string;
-        id: string;
         file: string;
         uploadTime: Date;
       }[];
 
 
+type AppProp = {
+  server: ValueProp | null
+  // unsub: Unsubscribe
+  // setServer: React.Dispatch<React.SetStateAction<ValueProp | null>>
+      }
+
 type ContextProp = {
   children: React.ReactNode;
 };
 
-export const AppContext = React.createContext<ValueProp | null>(null); //create the context API
+export const AppContext = React.createContext<AppProp | undefined>(undefined); //create the context API
 //function body
 export default function Context({ children }: ContextProp) {
   const [server, setServer] = React.useState<ValueProp | null>(null);
@@ -34,14 +40,17 @@ export default function Context({ children }: ContextProp) {
         );
       };
       fetchData();
+      console.log(server)
     }, []);
   return (
-    <AppContext.Provider value={ server  }>
+    <AppContext.Provider value={{server}}>
       {children}
     </AppContext.Provider>
   );
 }
 
+
 export const useGlobalContext = () => {
+  console.log(useContext(AppContext))
   return useContext(AppContext);
 };

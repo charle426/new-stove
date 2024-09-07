@@ -1,16 +1,18 @@
 import { Suspense } from "react";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { useGlobalContext } from "@/stove components/Context";
+import { Button } from "@/components/ui/button";
 export function BlogAll() {
 
-  const server = useGlobalContext();
+  const { server
+  } = useGlobalContext()
+  console.log(server)
   const data = server?.map((items, index) => {
     const readTime = items.content;
     let min = 1;
     if (readTime.length > 200) {
       min = Math.ceil(readTime.trim().split(/\s+/).length / 200);
     }
-
     
     return (
       <Link key={index} to={`/blog/${items.id}`}>
@@ -62,7 +64,7 @@ export function BlogAll() {
 }
 
 export function BlogSome() {
-  const server = useGlobalContext();
+  const {server} = useGlobalContext();
   const someBlog = server?.slice(0, 3)
   const data = someBlog?.map((items, index) => {
     const readTime = items.content;
@@ -91,7 +93,7 @@ export function BlogSome() {
             </h1>
             <p className="line-clamp-2">{items.content}</p>
             <div className="mb-5">
-              <p className="text-small mt-3 ">{min} min read</p>
+              <p className="text-sm opacity-60 mt-3 ">{min} min read</p>
             </div>
           </div>
         </div>
@@ -101,7 +103,7 @@ export function BlogSome() {
 
 
   return (
-    <section className="flex justify-center items-center py-10 flex-col gap-5">
+    <section className="flex justify-center py-10 flex-col gap-5">
       <h2 className="font-medium text-4xl">Join Our Community</h2>
       <Suspense
         fallback={
@@ -110,7 +112,7 @@ export function BlogSome() {
           </div>
         }
       >
-        <div className="flex flex-wrap flex-grow justify-center items-center sm:items-start gap-8 *:basis-[95%] sm:*:basis-[40%] lg:*:basis-[30%]">
+        <div className="flex flex-wrap flex-grow md:justify-center items-start sm:items-center gap-8 *:basis-[95%] sm:*:basis-[40%] lg:*:basis-[30%]">
           {server?.length ? (
             data
           ) : (
@@ -118,6 +120,14 @@ export function BlogSome() {
           )}
         </div>
       </Suspense>
+      <div className="w-full flex justify-center items-center my-5">
+
+      <Link to="">
+      <Button className="rounded-xl hover:bg-blue-400" >
+          Blogs
+      </Button>
+      </Link>
+      </div>
     </section>
   );
 }
