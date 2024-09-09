@@ -11,10 +11,12 @@ export default function Edit() {
     const { id } = useParams();
   const blogsCollection = collection(db, "blogs");
   const docRef: DocumentReference = doc(db, "blogs", `${id}`);
+  const [imageFile, setImageFile] = useState("")
+  console.log(imageFile)
   const [edited, setEdited] = useState({
         title: "",
         content: "",
-        file: ""
+        file: imageFile
   });
   console.log(edited)
     useEffect(() => { 
@@ -57,7 +59,6 @@ export default function Edit() {
         })
     }
   const [wait, setWait] = useState(false)
-  const [imageFile, setImageFile] = useState("")
    
      function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
        const imgRef = ref(storage, `/images/file${v4()}`);

@@ -13,8 +13,6 @@ import { db } from "../firebaseConfig";
 
 type AppProp = {
   server: ValueProp | null
-  // unsub: Unsubscribe
-  // setServer: React.Dispatch<React.SetStateAction<ValueProp | null>>
       }
 
 type ContextProp = {

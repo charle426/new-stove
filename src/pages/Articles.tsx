@@ -8,7 +8,7 @@ export default function Articles() {
 
   const [blog, setBlog] = useState<DocumentData | undefined>(undefined)
     useEffect(() => {
-      const blog = doc(db, "blogs", id)
+      const blog = doc(db, "blogs", `${id}`)
         const fetchData = async() => {
                    const data = await getDoc(blog);
                    const res = data.data()

@@ -63,15 +63,15 @@ export default function Admin(props: Props) {
   }, []);
 
   React.useEffect(() => {
-     const unsub = onSnapshot(doc(blogsCollection), (docs : DocumentData) => {
-       console.log(docs.data()?.title)
+     const unsub = onSnapshot(doc(blogsCollection), (snapshot : DocumentData) => {
+       console.log(snapshot.docs.data()?.title)
       return setPostedBlogs([
         {
-          id: docs.id,
-          title: docs.data()?.title,
-          content: docs.data()?.content,
-          file: docs.data()?.file,
-          uploadTime: docs.data()?.uploadTime,
+          id: snapshot.docs.id,
+          title: snapshot.docs.data()?.title,
+          content: snapshot.docs.data()?.content,
+          file: snapshot.docs.data()?.file,
+          uploadTime: snapshot.docs.data()?.uploadTime,
         }])
      });
     return unsub
