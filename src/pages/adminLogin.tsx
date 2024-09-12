@@ -37,7 +37,7 @@ export default function AdminLogin(props : Props) {
     signInWithEmailAndPassword(auth, login.email, login.password)
       .then((userCredential) => {
         // Signed in
-    
+    console.log(userCredential.user)
           props.setAdminAuth(true)
           navigate("/blog/stove/admin/234813649");
         // ...
