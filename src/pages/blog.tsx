@@ -4,7 +4,7 @@ import { useGlobalContext } from "@/stove components/Context";
 import { Button } from "@/components/ui/button";
 export function BlogAll() {
 
-  const {server} 
+  const {server} : any
    = useGlobalContext()
   console.log(server)
   const data = server?.map((items: any, index : number) => {
@@ -64,7 +64,7 @@ export function BlogAll() {
 }
 
 export function BlogSome() {
-  const {server} = useGlobalContext();
+  const {server} :any = useGlobalContext();
   const someBlog = server?.slice(0, 3)
   const data = someBlog?.map((items : any, index: number) => {
     const readTime = items.content;
