@@ -36,10 +36,10 @@ export function Footer() {
               <NavLink to="about-us">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="fleet-services">Fleet Services</NavLink>
+              <NavLink to="fleet-delivery">Fleet Services</NavLink>
             </li>
             <li>
-              <NavLink to="partnership">Partnership</NavLink>
+              <NavLink to="investment">Partnership</NavLink>
             </li>
             <li>
               <NavLink to="community">Community</NavLink>
@@ -50,26 +50,23 @@ export function Footer() {
           </ul>
           <ul>
             <li>
-              <NavLink to="about-us">Cooking Gas Delivery</NavLink>
+              <NavLink to="petroleum-delivery">Petroleum Delivery</NavLink>
             </li>
-            <li>
-              <NavLink to="fleet-services">Fuel Delivery</NavLink>
-            </li>
-            <li>
+            {/* <li>
               <NavLink to="partnership">Engine Oil Change</NavLink>
             </li>
             <li>
               <NavLink to="community">E-commerce</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="shipping">Shipping</NavLink>
             </li>
             <li>
               <NavLink to="bill-payments">Bill Payment</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="flights-and-hotels">Flights and Hotel</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="waste-disposal">Waste Disposal</NavLink>
             </li>
@@ -88,7 +85,7 @@ export function Footer() {
         </div>
       </div>
       <div className="bg-accent-foreground h-[0.8px] w-full"></div>
-      <p className="text-stone-500 text-[0.9rem]">© 2024 CAFU. All Rights Reserved</p>
+      <p className="text-stone-500 text-[0.9rem]">© 2024 STOVE. All Rights Reserved</p>
     </footer>
   );
 }

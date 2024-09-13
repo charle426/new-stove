@@ -155,9 +155,9 @@ export default function PetroleumPage() {
                   No app? No problem.
                 </h3>
                 <p>
-                  In a rush and spot a CAFU truck? No sweat – just approach the
-                  Pilot and request a fill up. He can pump on the spot and
-                  you’ll be back on the move in minutes.
+                  In a rush and spot a <b>STOVE</b> truck? No sweat – just
+                  approach the Pilot and request a fill up. He can pump on the
+                  spot and you’ll be back on the move in minutes.
                 </p>
               </div>
               <div className="w-full flex md:justify-end justify-center">
@@ -222,7 +222,15 @@ export default function PetroleumPage() {
                 1
               </p>
               <p className="font-medium text-[1.2rem]">
-                Download the STOVE app or continue on <span><a href="https://www.stv.afrimol.com.ng/register.php" className="underline visited:text-slate-700 visited:dark:text-slate-300 text-primary">web</a></span>
+                Download the STOVE app or continue on{" "}
+                <span>
+                  <a
+                    href="https://www.stv.afrimol.com.ng/register.php"
+                    className="underline visited:text-slate-700 visited:dark:text-slate-300 text-primary"
+                  >
+                    web
+                  </a>
+                </span>
               </p>
             </div>
             <div className="flex items-center justify-center gap-3">
