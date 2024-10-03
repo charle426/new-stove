@@ -7,6 +7,7 @@ import {getDownloadURL, ref, uploadBytes} from "firebase/storage"
 import { v4 } from "uuid";
 import {useNavigate} from "react-router-dom"
 import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 type Props = {
   adminAuth : boolean | null
@@ -63,21 +64,26 @@ export default function Admin(props: Props) {
   }, []);
 
   React.useEffect(() => {
-     const unsub = onSnapshot(doc(blogsCollection), (snapshot : DocumentData) => {
-       console.log(snapshot.docs.data()?.title)
-      return setPostedBlogs([
-        {
-          id: snapshot.docs.id,
-          title: snapshot.docs.data()?.title,
-          content: snapshot.docs.data()?.content,
-          file: snapshot.docs.data()?.file,
-          uploadTime: snapshot.docs.data()?.uploadTime,
-        }])
+     const unsub = onSnapshot(blogsCollection, (snapshot : DocumentData) => {
+  
+       const data = snapshot.docs.map((doc: DocumentData) => {
+        //  console.log(doc.data())
+      const  docObj = {
+         id: doc.id,
+          title: doc.data().title,
+          content: doc.data().content,
+          file: doc.data().file,
+          uploadTime: doc.data().uploadTime,
+         }
+         return docObj
+     })
+     setPostedBlogs(data)
+       
      });
     return unsub
   }, [])
-  // console.log(postedBlogs);
-  const data = postedBlogs?.map((items, index) => {
+const sortData = postedBlogs?.sort((a: any, b : any) => b.uploadTime - a.uploadTime)
+  const data = sortData?.map((items, index) => {
     const readTime = items.content
     let min = 1;
     if (readTime?.length > 200) {
@@ -99,15 +105,15 @@ export default function Admin(props: Props) {
             <div className="relative p-3 w-full">
               <h1
                 id={items.title}
-                className="font-semibold text-[1.5rem] duration-200 group-hover:text-[#a8e92f] sm:text-[1.5rem]"
+                className="font-semibold text-[1.5rem] duration-200 group-hover:text-primary sm:text-[1.5rem]"
               >
                 {items.title}
               </h1>
-              <p className="line-clamp-2 text-[#1b1b1b96] group-hover:text-black">
+              <p className="line-clamp-2">
                 {items.content}
               </p>
               <div className="mb-5">
-                <p className="text-[0.8rem] text-[#1b1b1b96] mt-3 group-hover:text-black">
+                <p className="text-[0.8rem] mt-3">
                   {min} min read
                 </p>
               </div>
@@ -116,12 +122,12 @@ export default function Admin(props: Props) {
         </Link>
         <div className="flex gap-2 items-center justify-center">
           <Link to={`/blog/admin/edit/${items.id}`}>
-            <div className="bg-blue-400 px-3 rounded-[3px] font-medium text-[18px] py-[2px]">
+            <div className="bg-primary px-3 rounded-[3px] font-medium text-[18px] py-[2px]">
               Edit 
             </div>
           </Link>
           <div
-            className="bg-red-500 px-3 rounded-[3px] font-medium text-[18px] py-[2px] cursor-pointer"
+            className="bg-red-600 px-3 rounded-[3px] font-medium text-[18px] py-[2px] cursor-pointer"
             id={items.id}
             onClick={() => doBoth(items.title, items.id)}
           >
@@ -158,29 +164,29 @@ export default function Admin(props: Props) {
       <div
         className={
           popUp
-            ? "fixed bg-[#0e1e1183] w-full h-full z-[1000] top-0 left-0"
+            ? "fixed bg-[#0e161e83] w-full h-full z-[1000] top-0 left-0"
             : ""
         }
       >
         <div
           className={
             popUp
-              ? "fixed rounded-3 left-[50%] top-[50%] flex flex-col gap-5 -translate-x-[50%] -translate-y-[50%] rounded-md bg-white p-5 duration-500 w-[90%] sm:w-[70%]"
-              : "bg-white p-5 duration-500 fixed w-0 h-0 overflow-hidden rounded-full left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]"
+              ? "fixed rounded-3 left-[50%] top-[50%] flex flex-col gap-5 -translate-x-[50%] -translate-y-[50%] rounded-md bg-accent p-5 duration-500 w-[90%] sm:w-[70%]"
+              : " p-5 duration-500 fixed w-0 h-0 overflow-hidden rounded-full left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]"
           }
         >
-          <p className="text-[#a8e92f]">are you sure you want to delete :</p>
+          <p className="text-primary">are you sure you want to delete :</p>
           <h3 className="font-semibold text-[1.5rem]">{deleteInfo.title}</h3>
           <div className="flex items-center gap-2 sm:flex-nowrap flex-wrap">
             <div
               id={deleteInfo.id}
-              className="bg-red-500 px-3 rounded-[3px] cursor-pointer font-medium text-[18px] py-[2px]"
+              className="bg-red-600 px-3 rounded-[3px] cursor-pointer font-medium text-[18px] py-[2px]"
               onClick={deleteAndReset}
             >
               Yes, delete
             </div>
             <div
-              className="bg-blue-400 px-3 rounded-[3px] cursor-pointer font-medium text-[18px] py-[2px]"
+              className="bg-primary px-3 rounded-[3px] cursor-pointer font-medium text-[18px] py-[2px]"
               onClick={() => setPopUp(false)}
             >
               Cancel
@@ -237,9 +243,9 @@ export default function Admin(props: Props) {
   };
 
   return (
-    <section className="px-5 md:px-10 py-7">
+    <section className="px-5 md:px-10 py-7 mt-20">
       <div className="flex justify-between items-center">
-        <h1>Admin</h1>
+        <h1 className="text-2xl font-medium">Welcome Admin</h1>
         <div>
           {postedBlogs ? <p>blogs({postedBlogs.length})</p> : <p>blogs(0)</p>}
         </div>
@@ -250,13 +256,21 @@ export default function Admin(props: Props) {
           className="flex flex-col w-full gap-4 mt-9"
         >
           <div className="flex flex-col md:flex-row">
+            <label htmlFor="fileId" className="flex gap-3 items-center">
+                <div className="ring-1 w-fit ring-primary p-3 rounded-full">
+                  <Plus className="text-[10rem] " size={40}/>
+              </div>
+              
+              {file ? <p> image added👍 </p> : <p>Add file❌</p>}
+            </label>
             <input
+              id="fileId"
               type="file"
               name="file"
               // value={file}
               onChange={handleFileChange}
               accept="image/*"
-              className="bg-white rounded-[10px] sm:w-[40%] w-full"
+              className="bg-white hidden rounded-[10px] sm:w-[40%] w-full"
             />
           </div>
           <div>
@@ -266,7 +280,7 @@ export default function Admin(props: Props) {
               value={adminForm.title}
               onChange={handleChange}
               placeholder="blog title"
-              className="bg-white rounded-[10px] w-full p-2"
+              className="bg-white dark:bg-slate-800 rounded-[10px] w-full p-2"
             />
           </div>
 
@@ -277,11 +291,14 @@ export default function Admin(props: Props) {
               onChange={handleChange}
               placeholder="Blog Content"
               rows={6}
-              className="bg-white rounded-[10px] w-full p-2"
+              className="bg-white dark:bg-slate-800 rounded-[10px] w-full p-2"
             ></textarea>
           </div>
 
-          <Button type="submit" className="button max-w-[150px] py-2 hover:opacity-90 duration-200 hover:bg-primary">
+          <Button
+            type="submit"
+            className="button max-w-[150px] py-2 hover:opacity-90 duration-200 hover:bg-primary"
+          >
             Post
           </Button>
         </form>
@@ -290,11 +307,11 @@ export default function Admin(props: Props) {
       <Suspense
         fallback={
           <div className="relative w-[300px] h-[300px] rounded-full p-3">
-            <div className="h-full w-full loader border-[#a8e92f] border-t-[6px] border-solid animate-spin rounded-full"></div>
+            <div className="h-full w-full loader border-primary border-t-[6px] border-solid animate-spin rounded-full"></div>
           </div>
         }
       >
-        <div className="auto-grid py-10 px-2 md:px-3">
+        <div className="flex flex-wrap mt-10 flex-grow md:justify-center items-start sm:items-center gap-8 *:basis-[95%] sm:*:basis-[40%] lg:*:basis-[30%]">
           {postedBlogs ? (
             data
           ) : (

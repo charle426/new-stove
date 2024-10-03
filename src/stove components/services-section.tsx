@@ -10,11 +10,11 @@ import {
   EmergenceFuel,
   EmergenceTyre,
 } from "./service-componentui";
-import fuelRefill from "../assets/3D-icon-web__fuel.png";
-import engineOil from "../assets/3D-icon-web__engine-oil.png";
+import fuelRefill from "../assets/3D-icon-web__fuel-Recovered.png";
+import engineOil from "../assets/images-removebg-preview.png";
 import rescue from "../assets/3D-icon-web__emergency.png";
 import insurance from "../assets/3D-icon-web__insurance.png";
-import wash from "../assets/3D-icon-web__car-wash.png";
+import wash from "../assets/recycling-truck.png";
 import tyreChange from "../assets/A_Friendly_Shipping_Guy_Cartoon.svg";
 import emergenceBattery from "../assets/emergency-card-web__battery_2x.png"
 import emergenceFuel from "../assets/emergency-card-web__fuel_2x.png"
@@ -78,7 +78,7 @@ export function Services() {
         <div className="sticky w-full left-0 md:top-20 top-10">
           <div className="flex flex-wrap items-center justify-center basis-[200px] w-full *:hover: *:shadow-lg *:overflow-hidden p-2 *:font-medium gap-5 *:rounded-lg">
             <div
-              className="flex flex-col items-center justify-center  bg-accent"
+              className="flex py-2 px-3 flex-col items-center justify-center  bg-accent"
               onClick={() => handleScroll(document.querySelector("#first"))}
             >
               <img
@@ -95,7 +95,7 @@ export function Services() {
               <img
                 src={engineOil}
                 alt="icon"
-                className="max-w-[60px] md:max-w-[100px]"
+                className="max-w-[80px] md:max-w-[150px] w-full"
               />
               <p className="text-[0.8rem]">Pay Bills</p>
             </div>

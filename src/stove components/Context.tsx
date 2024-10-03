@@ -38,7 +38,6 @@ export default function Context({ children }: ContextProp) {
         );
       };
       fetchData();
-      console.log(server)
     }, []);
   return (
     <AppContext.Provider value={{server}}>
@@ -49,6 +48,5 @@ export default function Context({ children }: ContextProp) {
 
 
 export const useGlobalContext = () => {
-  console.log(useContext(AppContext))
   return useContext(AppContext);
 };

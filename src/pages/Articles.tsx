@@ -18,7 +18,7 @@ export default function Articles() {
         fetchData()
         }, [])
     return (
-      <section className="md:px-10 px-3">
+      <section className="md:px-10 px-3 mt-24">
         <Suspense
           fallback={
             <div className="relative w-[300px] h-[300px] rounded-full p-3">

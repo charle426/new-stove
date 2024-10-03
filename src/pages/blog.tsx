@@ -6,8 +6,11 @@ export function BlogAll() {
 
   const {server} : any
    = useGlobalContext()
-  console.log(server)
-  const data = server?.map((items: any, index : number) => {
+  const sortData = server?.sort(
+    (a: any, b: any) => b.uploadTime - a.uploadTime
+  );
+  
+  const data = sortData?.map((items: any, index : number) => {
     const readTime = items.content;
     let min = 1;
     if (readTime.length > 200) {
@@ -64,8 +67,11 @@ export function BlogAll() {
 }
 
 export function BlogSome() {
-  const {server} :any = useGlobalContext();
-  const someBlog = server?.slice(0, 3)
+  const { server }: any = useGlobalContext();
+  const sortData = server?.sort(
+    (a: any, b: any) => b.uploadTime - a.uploadTime
+  );
+  const someBlog = sortData?.slice(0, 3)
   const data = someBlog?.map((items : any, index: number) => {
     const readTime = items.content;
     let min = 1;
@@ -122,7 +128,7 @@ export function BlogSome() {
       </Suspense>
       <div className="w-full flex justify-center items-center my-5">
 
-      <Link to="">
+      <Link to="blog">
       <Button className="rounded-xl hover:bg-blue-400" >
           Blogs
       </Button>

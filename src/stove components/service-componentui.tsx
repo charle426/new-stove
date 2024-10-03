@@ -69,7 +69,7 @@ function EngineOil(props: { classString: string; src: string }) {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img src={props.src} alt="icon" className="max-w-[150px]" />
+            <img src={props.src} alt="icon" className="max-w-[250px] w-full" />
           </div>
         </div>
       </div>

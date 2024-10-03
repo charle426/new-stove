@@ -1,15 +1,15 @@
 import { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import { useParams } from "react-router-dom";
-import { collection, doc, DocumentReference, getDoc, onSnapshot, updateDoc } from "firebase/firestore";
+import { doc, DocumentReference, getDoc, updateDoc } from "firebase/firestore";
 import { db, storage } from "../firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid"
 import {useNavigate} from "react-router-dom"
 import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 export default function Edit() {
     const { id } = useParams();
-  const blogsCollection = collection(db, "blogs");
   const docRef: DocumentReference = doc(db, "blogs", `${id}`);
   const [imageFile, setImageFile] = useState("")
   console.log(imageFile)
@@ -18,7 +18,6 @@ export default function Edit() {
         content: "",
         file: imageFile
   });
-  console.log(edited)
     useEffect(() => { 
       async function editData() {
         const data = await getDoc(docRef)
@@ -32,19 +31,6 @@ export default function Edit() {
       }
             editData()
     }, [])
-
-    useEffect(() => {
-     const unsub = onSnapshot(doc(blogsCollection), (docs) => {
-       console.log(docs.data()?.title)
-      return setEdited(
-        {
-          title: docs.data()?.title,
-          content: docs.data()?.content,
-          file: docs.data()?.file,
-        })
-     });
-    return unsub
-  }, [])
 
     const navigate = useNavigate()
    
@@ -109,14 +95,28 @@ setWait(true)
           onSubmit={handleSubmit}
           className="flex flex-col gap-5"
         >
-          <div>
+          <div className="flex flex-col md:flex-row">
+            <label htmlFor="fileId" className="flex gap-3 items-center">
+              <div className="ring-1 w-fit ring-primary p-3 rounded-full">
+                <Plus className="text-[10rem] " size={40} />
+              </div>
+
+              {imageFile ? (
+                <p> image added👍 </p>
+              ) : (
+                <p>
+                  Add file ignore if you don't want to change the previous image
+                </p>
+              )}
+            </label>
             <input
+              id="fileId"
               type="file"
               name="file"
-              accept="image/*"
+              // value={file}
               onChange={handleFileChange}
-              placeholder="edit Blog file"
-              className="bg-white rounded-[10px] w-full p-2"
+              accept="image/*"
+              className="bg-white hidden rounded-[10px] sm:w-[40%] w-full"
             />
           </div>
           <div>
@@ -126,7 +126,7 @@ setWait(true)
               value={edited.title}
               onChange={handleChange}
               placeholder="edit Blog Title"
-              className="bg-white rounded-[10px] w-full p-2"
+              className="bg-white dark:bg-slate-800 rounded-[10px] w-full p-2"
             />
           </div>
 
@@ -137,20 +137,24 @@ setWait(true)
               onChange={handleChange}
               placeholder="Edit Blog Content"
               rows={6}
-              className="bg-white rounded-[10px] w-full p-2"
+              className="bg-white dark:bg-slate-800 rounded-[10px] w-full p-2"
             ></textarea>
           </div>
 
           {wait ? (
-                    <Button
-                        variant={"outline"}
+            <Button
+              variant={"outline"}
               className="button pointer-events-none select-none animate-pulse flex justify-center items-center max-w-[150px] py-2"
             >
               Please Wait...
             </Button>
           ) : (
-            <Button variant={"outline"} type="submit" className="button max-w-[150px] py-2">
-              Edit
+            <Button
+              variant={"outline"}
+              type="submit"
+              className="button max-w-[150px] py-2"
+            >
+              update
             </Button>
           )}
         </form>
