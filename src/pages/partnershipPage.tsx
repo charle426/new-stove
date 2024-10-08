@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import card1 from "../assets/cpg-card__discover-01_2x.jpeg";
 import card2 from "../assets/cpg-card__discover-02.jpeg";
 import card3 from "../assets/cpg-card__discover-03.jpeg";
-import card4 from "../assets/cpg-card__discover-04.jpeg";
+import card4 from "../assets/cpg-card__discover-04.png";
 import {
   Carousel,
   CarouselContent,

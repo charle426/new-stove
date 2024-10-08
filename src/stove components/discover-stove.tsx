@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import card1 from "../assets/cpg-card__discover-01_2x.jpeg"
 import card2 from "../assets/cpg-card__discover-02.jpeg"
 import card3 from "../assets/cpg-card__discover-03.jpeg"
-import card4 from "../assets/cpg-card__discover-04.jpeg"
+import card4 from "../assets/cpg-card__discover-04.png"
 import arrowIcon from "../assets/arrow-east-icon.svg"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 export default function Discover() {

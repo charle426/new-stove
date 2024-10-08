@@ -11,10 +11,10 @@ import {
   EmergenceTyre,
 } from "./service-componentui";
 import fuelRefill from "../assets/3D-icon-web__fuel-Recovered.png";
-import engineOil from "../assets/images-removebg-preview.png";
+import engineOil from "../assets/images-removebg-preview (1).png";
 import rescue from "../assets/3D-icon-web__emergency.png";
 import insurance from "../assets/3D-icon-web__insurance.png";
-import wash from "../assets/recycling-truck.png";
+import wash from "../assets/waste-image.png";
 import tyreChange from "../assets/A_Friendly_Shipping_Guy_Cartoon.svg";
 import emergenceBattery from "../assets/emergency-card-web__battery_2x.png"
 import emergenceFuel from "../assets/emergency-card-web__fuel_2x.png"
@@ -95,7 +95,7 @@ export function Services() {
               <img
                 src={engineOil}
                 alt="icon"
-                className="max-w-[80px] md:max-w-[150px] w-full"
+                className="max-w-[80px] md:max-w-[100px] w-full"
               />
               <p className="text-[0.8rem]">Pay Bills</p>
             </div>
@@ -130,7 +130,7 @@ export function Services() {
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
               />
-              <p className="text-[0.8rem]">Insurance</p>
+              <p className="text-[0.8rem]">Logistics</p>
             </div>
             <div
               className="py-2 px-3 flex flex-col items-center justify-center bg-accent"

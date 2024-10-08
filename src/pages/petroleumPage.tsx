@@ -1,5 +1,5 @@
 import ScanToDownload from "@/stove components/scantodownload";
-import fuel from "../assets/3D-icon-web__fuel.png"
+import fuel from "../assets/3D-icon-web__fuel-Recovered.png"
 import blob from "../assets/blob-blur.svg"
 import noQueues from "../assets/IMG-20230929-WA0009.png"
 import spotFuel from "../assets/video_thumb_-_Fuel.jpeg"

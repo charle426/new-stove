@@ -152,7 +152,7 @@ export default function Navbar() {
                       : "hover:text-primary font-medium text-[0.9rem]"
                   }
                 >
-                  Partnership
+                  Investment
                 </NavLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -207,7 +207,7 @@ export default function Navbar() {
           </NavigationMenuList>
           <NavigationMenuList className="lg:ml-12 ml-4 gap-2 md:gap-0 flex justify-start md:justify-end">
             <NavigationMenuItem>
-                <a href="https://www.stv.afrimol.com.ng/register.php"
+                <a href="https://stove.com.ng/register.php"
                 className="duration-300 hover:opacity-75 font-medium text-[0.9rem]"
                 
               >

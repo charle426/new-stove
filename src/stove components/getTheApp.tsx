@@ -16,12 +16,12 @@ export default function GetTheApp() {
                   <p className="text-[1rem]">Scan to download app</p>
                   <p>Or start on the web</p>
                   <div className="flex gap-2 items-center">
-                    <a href="https://www.stv.afrimol.com.ng/register.php">
+                    <a href="https://stove.com.ng/register.php">
                       <Button className="dark:text-accent-foreground">
                         Register
                       </Button>
                     </a>
-                    <a href="https://www.stv.afrimol.com.ng/login.php">
+                    <a href="https://stove.com.ng/register.php">
                       <Button className="dark:text-accent-foreground">
                         Login
                       </Button>

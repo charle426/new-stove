@@ -33,7 +33,7 @@ function Fuel(props: { classString: string; src: string }) {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img src={props.src} alt="icon" className="max-w-[150px]" />
+            <img src={props.src} alt="icon" className="max-w-[250px]" />
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@ function CarWash(props: { classString: string; src: string }) {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img src={props.src} alt="icon" className="max-w-[150px]" />
+            <img src={props.src} alt="icon" className="max-w-[250px]" />
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@ function Tyre(props: { classString: string; src: string }) {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img src={props.src} alt="icon" className="max-w-[150px]" />
+            <img src={props.src} alt="icon" className="max-w-[250px]" />
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@ function Insurance(props: { classString: string; src: string }) {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img src={props.src} alt="icon" className="max-w-[150px]" />
+            <img src={props.src} alt="icon" className="max-w-[250px]" />
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@ function Rescue(props: { classString: string; src: string }) {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img src={props.src} alt="icon" className="max-w-[150px]" />
+            <img src={props.src} alt="icon" className="max-w-[250px]" />
           </div>
         </div>
       </div>

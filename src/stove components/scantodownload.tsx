@@ -11,13 +11,13 @@ export default function ScanToDownload() {
         <div className="flex flex-col gap-1 items-center">
           <p>Scan to download app</p>
           <p className="text-[1rem]">Or</p>
-          <a href="https://www.stv.afrimol.com.ng/register.php">
+          <a href="https://stove.com.ng/register.php">
             <Button className="dark:text-accent-foreground">Get Started</Button>
           </a>
         </div>
       </div>
       <div className="md:hidden ">
-        <a href="https://www.stv.afrimol.com.ng/register.php">
+        <a href="https://stove.com.ng/register.php">
           <Button className="p-6 rounded-xl hover:bg-secondary text-white">Get Started</Button>
         </a>
       </div>
