@@ -1,10 +1,10 @@
 import blob from "../assets/blob-blur.svg";
 import { Button } from "@/components/ui/button";
 // import { Link } from "react-router-dom";
-import card1 from "../assets/cpg-card__discover-01_2x.jpeg";
+// import card1 from "../assets/cpg-card__discover-01_2x.jpeg";
 import card2 from "../assets/cpg-card__discover-02.jpeg";
 import card3 from "../assets/cpg-card__discover-03.jpeg";
-import card4 from "../assets/cpg-card__discover-04.png";
+// import card4 from "../assets/cpg-card__discover-04.png";
 import {
   Carousel,
   CarouselContent,
@@ -15,7 +15,7 @@ import { Building2, CarFront, MonitorSmartphone, PackageOpen, WorkflowIcon } fro
 
 export default function PartnerShipPage() {
    const style1 = {
-     backgroundImage: `url(${card1})`,
+     backgroundImage: `url(${card2})`,
    };
    const style2 = {
      backgroundImage: `url(${card2})`,
@@ -24,7 +24,7 @@ export default function PartnerShipPage() {
      backgroundImage: `url(${card3})`,
    };
    const style4 = {
-     backgroundImage: `url(${card4})`,
+     backgroundImage: `url(${card3})`,
    };
     return (
       <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">

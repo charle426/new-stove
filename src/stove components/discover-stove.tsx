@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
-import card1 from "../assets/cpg-card__discover-01_2x.jpeg"
+// import card1 from "../assets/cpg-card__discover-01_2x.png"
 import card2 from "../assets/cpg-card__discover-02.jpeg"
 import card3 from "../assets/cpg-card__discover-03.jpeg"
-import card4 from "../assets/cpg-card__discover-04.png"
+// import card4 from "../assets/cpg-card__discover-04.png"
 import arrowIcon from "../assets/arrow-east-icon.svg"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 export default function Discover() {
     const style1 = {
-        backgroundImage: `url(${card1})`
+        backgroundImage: `url(${card2})`
     }
     const style2 = {
         backgroundImage: `url(${card2})`
@@ -16,7 +16,7 @@ export default function Discover() {
         backgroundImage: `url(${card3})`
     }
     const style4 = {
-        backgroundImage: `url(${card4})`
+        backgroundImage: `url(${card3})`
     }
     return (
       <section className="relative py-10">
