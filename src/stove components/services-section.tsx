@@ -15,7 +15,7 @@ import engineOil from "../assets/images-removebg-preview (1).png";
 import rescue from "../assets/3D-icon-web__emergency.png";
 import insurance from "../assets/3D-icon-web__insurance.png";
 import wash from "../assets/waste-image.png";
-import tyreChange from "../assets/A_Friendly_Shipping_Guy_Cartoon.png";
+import shipping_img from "../assets/A_Friendly_Shipping_Guy_Cartoon.png";
 import emergenceBattery from "../assets/emergency-card-web__battery_2x.png"
 import emergenceFuel from "../assets/emergency-card-web__fuel_2x.png"
 import emergenceTyre from "../assets/emergency-card-web__tyre_2x.png"
@@ -55,7 +55,7 @@ export function Services() {
       return Tyre({
         classString:
           "inview py-6 px-3 md:px-10 rounded-[50px] gradBg flex flex-col md-flex-row w-full",
-        src: tyreChange,
+        src: shipping_img,
       });
     } else if (insuranceInView) {
       return Insurance({
@@ -114,7 +114,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#four"))}
             >
               <img
-                src={tyreChange}
+                src={shipping_img}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[80px]"
               />
@@ -129,7 +129,7 @@ export function Services() {
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
               />
-              <p className="text-[0.8rem]">Logistics</p>
+              <p className="text-[0.8rem]">Investment</p>
             </div>
             <div
               className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
