@@ -1,6 +1,6 @@
 import ScanToDownload from "@/stove components/scantodownload";
 import blob from "../assets/blob-blur.svg";
-import imgGroup from '../assets/img_group-aboutus_2x.png'
+import imgGroup from '../assets/IMG-20241009-WA0016.jpg'
 import imgJoin from '../assets/img_aboutus-02.jpeg'
 import { Button } from "@/components/ui/button";
 import { ChevronRightIcon } from "lucide-react";

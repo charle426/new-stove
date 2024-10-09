@@ -21,7 +21,7 @@ function Fuel(props: { classString: string; src: string }) {
               Fuel up anywhere 24/7 at petrol station prices.
             </h1>
             <p>
-              Zero delivery fees and around the clock fuel delivery at same
+              Zero delivery fees and around the clock gasoline delivery at same
               price as the petrol station. Yep – you heard it right.
             </p>
             <div>
@@ -167,10 +167,10 @@ function Insurance(props: { classString: string; src: string }) {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div>
             <h1 className="text-[2rem] font-semibold text-[#eeffef] md:text-[3.5rem]">
-              Ensure the best protection on the road.
+              shop like never before.
             </h1>
             <p>
-              It’s not worth the risk – get the best car cover on the streets.
+              Shop with ease and pay what you want, Stove Market Place is something you have never seen before.
             </p>
             <div>
               <Link to="investment">

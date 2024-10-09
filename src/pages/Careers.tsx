@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import blob from "../assets/blob-blur.svg";
-import img1 from "../assets/img_careers-01.jpeg"
+import img1 from "../assets/IMG-20241009-WA0019.jpg"
 import img2 from "../assets/img_careers-02.jpeg"
 import { HandHeart, KeySquare, Lightbulb, ShoppingCart, UsersRound } from "lucide-react";
 export default function Careers() {

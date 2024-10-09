@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import card1 from "../assets/discover1.jpg";
-import card2 from "../assets/discover2.jpg";
-import card3 from "../assets/discover3.jpg";
-import card4 from "../assets/discover4.jpg";
+import card1 from "../assets/IMG-20241009-WA0030.jpg";
+import card2 from "../assets/IMG-20240924-WA0004.jpg";
+import card3 from "../assets/cpg-card__discover-03.jpeg";
+import card4 from "../assets/20240717_211606.jpg";
 import arrowIcon from "../assets/arrow-east-icon.svg"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 export default function Discover() {
@@ -37,10 +37,10 @@ export default function Discover() {
               >
                 <div className="relative z-10">
                   <h3 className="text-[1.5rem] font-medium mb-2">
-                    <span className="text-pink-300">Get 10% off </span>
-                    your first order
+                    Don't let foul smell
+                    <span className="text-pink-300"> Disturb You </span>
                   </h3>
-                  <p>Enjoy up to 10% discount on your first petroleum order</p>
+                  <p>Order a stove trasher to dispose your garbage <br/> Your first trash disposal is on us FREE to enjoy</p>
                 </div>
               </div>
             </CarouselItem>
@@ -51,13 +51,11 @@ export default function Discover() {
               >
                 <div className="relative z-10">
                   <h3 className="text-[1.5rem] font-medium mb-2">
-                    Earn
-                    <span className="text-pink-300"> 20% discount </span>
-                    for you and a friend
+                    Do
+                    <span className="text-pink-300"> Business wth Ease </span>
                   </h3>
                   <p>
-                    Stove customer can refer friends and get 20% discount on
-                    their first order
+                    Enjoy seamless local same day delivery and international shipping with the lowest cost
                   </p>
                 </div>
               </div>
@@ -98,8 +96,7 @@ export default function Discover() {
                     <span className="text-pink-300"> Ask, stop, refill</span>
                   </h3>
                   <p>
-                    If you spot a STOVE truck parked just ask them to refill
-                    your vehicle
+                    If you spot a STOVE truck parked just ask them for a refill
                   </p>
                 </div>
               </div>

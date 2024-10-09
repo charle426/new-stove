@@ -85,7 +85,7 @@ export function Services() {
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
               />
-              <p className="text-[0.8rem]">Fuel</p>
+              <p className="text-[0.8rem]">Gasoline</p>
             </div>
             <div
               className="py-2 px-3 flex flex-col items-center justify-center bg-accent"

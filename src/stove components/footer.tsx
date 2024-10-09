@@ -36,10 +36,10 @@ export function Footer() {
               <NavLink to="about-us">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="fleet-delivery">Fleet Services</NavLink>
+              <NavLink to="investment">Investment</NavLink>
             </li>
             <li>
-              <NavLink to="investment">Partnership</NavLink>
+              <NavLink to="fleet-delivery">Partnership</NavLink>
             </li>
             <li>
               <NavLink to="community">Community</NavLink>
@@ -50,7 +50,7 @@ export function Footer() {
           </ul>
           <ul>
             <li>
-              <NavLink to="petroleum-delivery">Petroleum Delivery</NavLink>
+              <NavLink to="petroleum-delivery">Gasoline Delivery</NavLink>
             </li>
             {/* <li>
               <NavLink to="partnership">Engine Oil Change</NavLink>

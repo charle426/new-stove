@@ -2,7 +2,7 @@ import ScanToDownload from "@/stove components/scantodownload";
 import fuel from "../assets/3D-icon-web__fuel-Recovered.png"
 import blob from "../assets/blob-blur.svg"
 import noQueues from "../assets/IMG-20230929-WA0009.png"
-import spotFuel from "../assets/video_thumb_-_Fuel.jpeg"
+import spotFuel from "../assets/IMG-20241009-WA0037.jpg"
 import Faq from "@/stove components/faq";
 export default function PetroleumPage() {
     return (
