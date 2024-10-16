@@ -15,11 +15,12 @@ const ogData = {
   image: "../assets/stovelogo.png",
   siteName: "Stove",
 };
-const canonicalUrl = "https://www.yourwebsite.com/your-page";
+const canonicalUrl = "https://www.nstve.netlify.app";
 
 export default function PetroleumPage() {
   return (
-    <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full"><Helmet>
+    <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">
+      <Helmet>
   <title>Refill</title>
   <meta name="About Us" content="Learn more about our company STOVE" />
   <meta property="og:title" content={ogData.title} />
@@ -28,7 +29,7 @@ export default function PetroleumPage() {
   <meta property="og:image" content={ogData.image} />
   <meta property="og:site_name" content={ogData.siteName} />
   <link rel="canonical" href={canonicalUrl} />
-</Helmet>;
+</Helmet>
       <div
         id="petrolHero"
         className="flex w-full justify-center items-center pt-36 pb-20 relative"

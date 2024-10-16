@@ -17,14 +17,14 @@ export default function Careers() {
   return (
     <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full"> <Helmet>
     <title>About Us</title>
-    <meta name="About Us" content="Learn more about our company STOVE" />
+    <meta name="Join Us" content="Join us at STOVE" />
     <meta property="og:title" content={ogData.title} />
     <meta property="og:description" content={ogData.description} />
     <meta property="og:url" content={ogData.url} />
     <meta property="og:image" content={ogData.image} />
     <meta property="og:site_name" content={ogData.siteName} />
     <link rel="canonical" href={canonicalUrl} />
-  </Helmet>;
+  </Helmet>
       <div
         id="partnershipHero"
         className="flex w-full justify-center items-center pt-36 pb-20 relative"

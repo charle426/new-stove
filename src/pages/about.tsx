@@ -14,7 +14,7 @@ export default function AboutPage() {
      image: "../assets/stovelogo.png",
      siteName: "Stove",
   };
-  const canonicalUrl = "https://www.yourwebsite.com/your-page";
+  const canonicalUrl = "https://www.nstve.netlify.app";
   
   return (
     <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">

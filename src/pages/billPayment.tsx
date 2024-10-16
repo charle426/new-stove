@@ -25,12 +25,12 @@ export default function BillPayment() {
   
   const ogData = {
     title: "About",
-    description: "pay your utility bills in a Click",
+    description: "Pay your utility bills in a Click",
     url: "https://www.nstve.netlify.app",
     image: "../assets/stovelogo.png",
     siteName: "Stove",
   };
-  const canonicalUrl = "https://www.yourwebsite.com/your-page";
+  const canonicalUrl = "https://www.nstve.netlify.app";
   
   return (
     <main>

@@ -1,10 +1,14 @@
 import { BlogAll } from "./blog";
 import blob from "../assets/blob-blur.svg"
 import bg from "../assets/img_careers-02.jpeg"
+import { Helmet } from "react-helmet";
 export default function BlogPage() {
     const style = {
       backgroundImage: `url(${bg})`,
-    };
+  };
+  <Helmet>
+    <title>Blogs</title>
+  </Helmet>
   return (
     <>
       <section className=" bg-cover bg-no-repeat bg-center object-cover overflow-hidden relative">
