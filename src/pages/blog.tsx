@@ -88,6 +88,7 @@ export function BlogSome() {
               alt="blog-image"
               width="100%"
               className="rounded-[20px] mb-2 duration-200 max-w-[400px]"
+              loading="lazy"
             />
           </div>
           <div className="relative p-3 w-full">

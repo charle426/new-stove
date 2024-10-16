@@ -6,9 +6,36 @@ import industrialHome from "../assets/home_2.jpg"
 import eletronicHome from "../assets/home_3.jpg"
 import customerRecycling from '../assets/customer-residential-recycling-toter-mm-removebg-preview.png'
 import binImg from "../assets/pngtree-flat-icon-for-waste-management-and-recycling-services-vector-png-image_42028252-removebg-preview.png"
+import { Helmet } from "react-helmet";
 export default function WastePage() {
+   const ogData = {
+     title: "Waste disposal",
+     description: "Call Us anytime 24/7. Its all about creating a better environment",
+     url: "https://www.nstve.netlify.app",
+     image: "../assets/stovelogo.png",
+     siteName: "Stove",
+   };
+   const canonicalUrl = "https://www.nstve.netlify.app";
+   
     return (
       <main className="px-3 md:px-7 lg:px-16 w-full overflow-hidden">
+        <Helmet>
+          <title>Recycle</title>
+          <meta
+            name="shipping"
+            content="Too good to be true? Absolutely not. Sit at home while we come
+                handle environmental threatening wastes. Our goal is to find
+                ways of recycling more materials until we live in a world where
+                waste is a thing of the past."
+          />
+          <meta property="og:title" content={ogData.title} />
+          <meta property="og:description" content={ogData.description} />
+          <meta property="og:url" content={ogData.url} />
+          <meta property="og:image" content={ogData.image} />
+          <meta property="og:site_name" content={ogData.siteName} />
+          <link rel="canonical" href={canonicalUrl} />
+        </Helmet>
+        ;
         <div
           id="WasteHero"
           className="flex w-full justify-center items-center pt-36 pb-20 relative"
@@ -25,6 +52,7 @@ export default function WastePage() {
                   src={binImg}
                   alt="Fuel Delivery Icon website"
                   className="max-w-[200px] w-full"
+                  loading="lazy"
                 />
               </div>
               <h1 className="hero-heading text-[2.5rem] md:text-[4.5rem] font-medium">

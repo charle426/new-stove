@@ -2,9 +2,30 @@ import whatsapp from "../assets/whatsapp-icon.svg"
 import emergence from "../assets/3D-icon-web__emergency.png"
 import { Button } from "@/components/ui/button";
 import { EmergenceServices } from "@/stove components/services-section";
+import { Helmet } from "react-helmet";
 export default function RescuePage() {
+  
+
+  const ogData = {
+    title: "emergence",
+    description: "Struck at the roadside no sweat Stove's Just a dial away",
+    url: "https://www.nstve.netlify.app",
+    image: "../assets/stovelogo.png",
+    siteName: "Stove",
+  };
+  const canonicalUrl = "https://www.nstve.netlify.app";
+  
     return (
-      <main>
+      <main><Helmet>
+    <title>emergence</title>
+    <meta name="Rescue" content="Learn more about our company STOVE" />
+    <meta property="og:title" content={ogData.title} />
+    <meta property="og:description" content={ogData.description} />
+    <meta property="og:url" content={ogData.url} />
+    <meta property="og:image" content={ogData.image} />
+    <meta property="og:site_name" content={ogData.siteName} />
+    <link rel="canonical" href={canonicalUrl} />
+  </Helmet>;
         <section className="px-3 md:px-7 lg:px-16 ">
           <div
             id="RescueHero"

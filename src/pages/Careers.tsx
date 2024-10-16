@@ -3,9 +3,28 @@ import blob from "../assets/blob-blur.svg";
 import img1 from "../assets/IMG-20241009-WA0019.jpg"
 import img2 from "../assets/img_careers-02.jpeg"
 import { HandHeart, KeySquare, Lightbulb, ShoppingCart, UsersRound } from "lucide-react";
+import { Helmet } from "react-helmet";
 export default function Careers() {
+  const ogData = {
+    title: "About",
+    description: "Learn more about our company STOVE",
+    url: "https://www.nstve.netlify.app",
+    image: "../assets/stovelogo.png",
+    siteName: "Stove",
+  };
+  const canonicalUrl = "https://www.nstve.netlify.app/careers";
+ 
   return (
-    <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">
+    <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full"> <Helmet>
+    <title>About Us</title>
+    <meta name="About Us" content="Learn more about our company STOVE" />
+    <meta property="og:title" content={ogData.title} />
+    <meta property="og:description" content={ogData.description} />
+    <meta property="og:url" content={ogData.url} />
+    <meta property="og:image" content={ogData.image} />
+    <meta property="og:site_name" content={ogData.siteName} />
+    <link rel="canonical" href={canonicalUrl} />
+  </Helmet>;
       <div
         id="partnershipHero"
         className="flex w-full justify-center items-center pt-36 pb-20 relative"
@@ -14,6 +33,7 @@ export default function Careers() {
           src={blob}
           alt=""
           className="absolute -z[10] left-0 top-0 opacity-35"
+          loading="lazy"
         />
         <div className="flex flex-col gap-10 items-center max-w-[900px] relative z-10">
           <div className="flex flex-col gap-6 items-center text-center">
@@ -66,6 +86,7 @@ export default function Careers() {
               src={img1}
               alt="life at stove"
               className="rounded-xl w-full max-w-[500px]"
+              loading="lazy"
             />
           </div>
         </div>
@@ -150,6 +171,7 @@ export default function Careers() {
               src={img2}
               alt="life at stove"
               className="rounded-xl w-full max-w-[500px]"
+              loading="lazy"
             />
           </div>
         </div>

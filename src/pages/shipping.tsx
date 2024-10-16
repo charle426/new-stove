@@ -4,9 +4,28 @@ import ScanToDownload from "@/stove components/scantodownload";
 import { Building2, Clock2, DoorClosed, Earth, Lock, Package, Zap } from "lucide-react";
 import  plane from "../assets/air-freight-services-1-540x365.jpg";
 import  ship from "../assets/Rectangle 34624289.png";
+import { Helmet } from "react-helmet";
 export default function Shipping() {
+  const ogData = {
+    title: "shipping",
+    description: "Lets manage your shipments from one destination to another",
+    url: "https://www.nstve.netlify.app",
+    image: "../assets/stovelogo.png",
+    siteName: "Stove",
+  };
+  const canonicalUrl = "https://www.nstve.netlify.app";
+  
     return (
-      <main className="overflow-hidden w-full">
+      <main className="overflow-hidden w-full"><Helmet>
+    <title>emergence</title>
+    <meta name="shipping" content="Lets manage your shipments from one destination to another" />
+    <meta property="og:title" content={ogData.title} />
+    <meta property="og:description" content={ogData.description} />
+    <meta property="og:url" content={ogData.url} />
+    <meta property="og:image" content={ogData.image} />
+    <meta property="og:site_name" content={ogData.siteName} />
+    <link rel="canonical" href={canonicalUrl} />
+  </Helmet>;
         <section className="px-3 md:px-7 lg:px-16">
           <div
             id="shippingHero"
