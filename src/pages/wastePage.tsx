@@ -15,14 +15,14 @@ export default function WastePage() {
      image: "../assets/stovelogo.png",
      siteName: "Stove",
    };
-   const canonicalUrl = "https://www.nstve.netlify.app";
+   const canonicalUrl = "/waste-disposal";
    
     return (
       <main className="px-3 md:px-7 lg:px-16 w-full overflow-hidden">
         <Helmet>
           <title>Recycle</title>
           <meta
-            name="shipping"
+            name="description"
             content="Too good to be true? Absolutely not. Sit at home while we come
                 handle environmental threatening wastes. Our goal is to find
                 ways of recycling more materials until we live in a world where

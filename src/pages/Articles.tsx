@@ -32,6 +32,7 @@ export default function Articles() {
                 src={blog?.file}
                 alt="blog-image"
                 width="100%"
+                loading="lazy"
                 className="rounded-[20px] mb-2 duration-200"
               />
             </div>

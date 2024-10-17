@@ -11,6 +11,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Building2, CarFront, MonitorSmartphone, PackageOpen, WorkflowIcon } from "lucide-react";
+import { Helmet } from "react-helmet";
 // import ScanToDownload from "@/stove components/scantodownload";
 
 export default function PartnerShipPage() {
@@ -25,9 +26,32 @@ export default function PartnerShipPage() {
    };
    const style4 = {
      backgroundImage: `url(${card4})`,
-   };
+  };
+  
+  const ogData = {
+    title: "About",
+    description: "Learn more about our company STOVE",
+    url: "/business",
+    image: "../assets/stovelogo.png",
+    siteName: "Stove",
+  };
+  const canonicalUrl = "/business";
     return (
       <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">
+        <Helmet>
+          <title>Partner Wth Stove</title>
+          <meta
+            name="description"
+            content="We’re partnering up with industry leaders to bring convenience
+                to our customers"
+          />
+          <meta property="og:title" content={ogData.title} />
+          <meta property="og:description" content={ogData.description} />
+          <meta property="og:url" content={ogData.url} />
+          <meta property="og:image" content={ogData.image} />
+          <meta property="og:site_name" content={ogData.siteName} />
+          <link rel="canonical" href={canonicalUrl} />
+        </Helmet>
         <div
           id="partnershipHero"
           className="flex w-full justify-center items-center pt-36 pb-20 relative"

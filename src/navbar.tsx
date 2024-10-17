@@ -74,14 +74,14 @@ export default function Navbar() {
               </NavigationMenuTrigger>
               <NavigationMenuContent className="min-w-[200px] relative md:absolute py-3 flex flex-col gap-3">
                 <NavLink
-                  to="petroleum-delivery"
+                  to="refill"
                   className={({ isActive }) =>
                     isActive
                       ? "text-primary font-medium text-[0.9rem]"
                       : "hover:text-primary font-medium text-[0.9rem]"
                   }
                 >
-                  Petroleum Delivery
+                  Get A Refill 
                 </NavLink>
                 <NavLink
                   to="waste-disposal"
@@ -145,14 +145,14 @@ export default function Navbar() {
                   Fleet Delivery
                 </NavLink>
                 <NavLink
-                  to="investment"
+                  to="business"
                   className={({ isActive }) =>
                     isActive
                       ? "text-primary font-medium text-[0.9rem]"
                       : "hover:text-primary font-medium text-[0.9rem]"
                   }
                 >
-                  Investment
+                  Partner Wth Stove
                 </NavLink>
               </NavigationMenuContent>
             </NavigationMenuItem>

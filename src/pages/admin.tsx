@@ -99,6 +99,7 @@ const sortData = postedBlogs?.sort((a: any, b : any) => b.uploadTime - a.uploadT
                 src={items.file}
                 alt="blog-image"
                 width="100%"
+                loading="lazy"
                 className="rounded-[20px] mb-2 duration-200 max-w-[400px]"
               />
             </div>

@@ -1,5 +1,4 @@
-import { lazy } from "react";
-const ScanToDownload = lazy(() => import("@/stove components/scantodownload"));
+import ScanToDownload from "@/stove components/scantodownload";
 import fuel from "../assets/3D-icon-web__fuel-Recovered.png";
 import blob from "../assets/blob-blur.svg";
 import noQueues from "../assets/IMG-20230929-WA0009.png";
@@ -15,21 +14,26 @@ const ogData = {
   image: "../assets/stovelogo.png",
   siteName: "Stove",
 };
-const canonicalUrl = "https://www.nstve.netlify.app";
+const canonicalUrl = "refill";
 
 export default function PetroleumPage() {
   return (
     <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">
       <Helmet>
-  <title>Refill</title>
-  <meta name="About Us" content="Learn more about our company STOVE" />
-  <meta property="og:title" content={ogData.title} />
-  <meta property="og:description" content={ogData.description} />
-  <meta property="og:url" content={ogData.url} />
-  <meta property="og:image" content={ogData.image} />
-  <meta property="og:site_name" content={ogData.siteName} />
-  <link rel="canonical" href={canonicalUrl} />
-</Helmet>
+        <title>Refill</title>
+        <meta
+          name="Refill"
+          content="Too good to be true? Absolutely not. High-quality petroleum
+              product delivered at the same price. Our petrol stations are on
+              wheels so we can bring the station to you."
+        />
+        <meta property="og:title" content={ogData.title} />
+        <meta property="og:description" content={ogData.description} />
+        <meta property="og:url" content={ogData.url} />
+        <meta property="og:image" content={ogData.image} />
+        <meta property="og:site_name" content={ogData.siteName} />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <div
         id="petrolHero"
         className="flex w-full justify-center items-center pt-36 pb-20 relative"

@@ -1,11 +1,11 @@
-import {lazy} from "react"
+
 import blob from "../assets/blob-blur.svg";
 import imgGroup from '../assets/IMG-20241009-WA0016.jpg'
 import imgJoin from '../assets/img_aboutus-02.jpeg'
 import { Button } from "@/components/ui/button";
 import { ChevronRightIcon } from "lucide-react";
 import {Helmet} from "react-helmet"
-const ScanToDownload = lazy(() => import("@/stove components/scantodownload"));
+import ScanToDownload from "@/stove components/scantodownload";
 export default function AboutPage() {
    const ogData = {
      title: "About",
@@ -14,13 +14,13 @@ export default function AboutPage() {
      image: "../assets/stovelogo.png",
      siteName: "Stove",
   };
-  const canonicalUrl = "https://www.nstve.netlify.app";
+  const canonicalUrl = "/about";
   
   return (
     <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">
       <Helmet>
         <title>About Us</title>
-        <meta name="About Us" content="Learn more about our company STOVE" />
+        <meta name="description" content="Learn more about our company STOVE" />
         <meta property="og:title" content={ogData.title} />
         <meta property="og:description" content={ogData.description} />
         <meta property="og:url" content={ogData.url} />

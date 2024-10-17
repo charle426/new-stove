@@ -1,12 +1,34 @@
 import { CalendarDays, Clock3, FileLineChart, Presentation } from "lucide-react";
 import blob from "../assets/blob-blur.svg";
 import { Button } from "@/components/ui/button";
-
+import { Helmet } from "react-helmet";
+const ogData = {
+  title: "Fleet",
+  description: "Fueling convenience to Nigeria's top companies",
+  url: "https://www.nstve.netlify.app",
+  image: "../assets/stovelogo.png",
+  siteName: "Stove",
+};
+const canonicalUrl = "/fleet-delivery";
 
 export default function FleetPage() {
 
   return (
     <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full">
+      <Helmet>
+        <title>About Us</title>
+        <meta
+          name="description"
+          content="Cost effective fleet operations, saving your business time and
+              money"
+        />
+        <meta property="og:title" content={ogData.title} />
+        <meta property="og:description" content={ogData.description} />
+        <meta property="og:url" content={ogData.url} />
+        <meta property="og:image" content={ogData.image} />
+        <meta property="og:site_name" content={ogData.siteName} />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <div
         id="FleetHero"
         className="flex w-full justify-center items-center pt-36 pb-20 relative"
@@ -30,7 +52,8 @@ export default function FleetPage() {
               Fueling convenience to Nigeria's top companies
             </h1>
             <p className="font-medium text-[1.2rem]">
-              Cost effective fleet operations, saving your business time and money
+              Cost effective fleet operations, saving your business time and
+              money
             </p>
           </div>
           <div>
@@ -76,15 +99,16 @@ export default function FleetPage() {
             <h3 className="font-medium text-4xl md:text-6xl mb-3">
               The STOVE business advantage
             </h3>
-            <p>
-              There is much more to it than fuel delivery
-            </p>
+            <p>There is much more to it than fuel delivery</p>
           </div>
           <div className="flex-col md:items-center justify-center flex gap-3 *:w-full *:max-w-[350px] *:rounded-xl *:p-4 *:bg-secondary">
             <div className=" flex gap-3 ">
               <CalendarDays className="text-primary w-[50px]" />
               <div>
-                <p>On-demand and pre-booking fuel and car wash services that fit your schedule and location</p>
+                <p>
+                  On-demand and pre-booking fuel and car wash services that fit
+                  your schedule and location
+                </p>
               </div>
             </div>
             <div className=" flex gap-3">

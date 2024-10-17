@@ -13,19 +13,25 @@ export default function RescuePage() {
     image: "../assets/stovelogo.png",
     siteName: "Stove",
   };
-  const canonicalUrl = "https://www.nstve.netlify.app";
+  const canonicalUrl = "/emergence-services";
   
     return (
-      <main><Helmet>
-    <title>emergence</title>
-    <meta name="Rescue" content="Learn more about our company STOVE" />
-    <meta property="og:title" content={ogData.title} />
-    <meta property="og:description" content={ogData.description} />
-    <meta property="og:url" content={ogData.url} />
-    <meta property="og:image" content={ogData.image} />
-    <meta property="og:site_name" content={ogData.siteName} />
-    <link rel="canonical" href={canonicalUrl} />
-  </Helmet>;
+      <main>
+        <Helmet>
+          <title>emergence</title>
+          <meta
+            name="description"
+            content="Ran out of fuel? Got a puncture? Battery died? Need a tow? We
+                  are just dial away it and we’ll be to you in minutes."
+          />
+          <meta property="og:title" content={ogData.title} />
+          <meta property="og:description" content={ogData.description} />
+          <meta property="og:url" content={ogData.url} />
+          <meta property="og:image" content={ogData.image} />
+          <meta property="og:site_name" content={ogData.siteName} />
+          <link rel="canonical" href={canonicalUrl} />
+        </Helmet>
+        ;
         <section className="px-3 md:px-7 lg:px-16 ">
           <div
             id="RescueHero"
@@ -62,8 +68,8 @@ export default function RescuePage() {
                 </a>
               </div>
             </div>
-                </div>
-                <EmergenceServices/>
+          </div>
+          <EmergenceServices />
           <div className="justify-center items-center flex py-10">
             <div className="flex flex-col gap-5 justify-center items-center text-center w-full">
               <svg viewBox="0 2 108.5 29" xmlns="https://www.w3.org/2000/svg">

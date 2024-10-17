@@ -6,18 +6,18 @@ import { HandHeart, KeySquare, Lightbulb, ShoppingCart, UsersRound } from "lucid
 import { Helmet } from "react-helmet";
 export default function Careers() {
   const ogData = {
-    title: "About",
+    title: "Career",
     description: "Learn more about our company STOVE",
     url: "https://www.nstve.netlify.app",
     image: "../assets/stovelogo.png",
     siteName: "Stove",
   };
-  const canonicalUrl = "https://www.nstve.netlify.app/careers";
+  const canonicalUrl = "/careers";
  
   return (
     <main className="px-3 md:px-7 lg:px-16 overflow-hidden w-full"> <Helmet>
-    <title>About Us</title>
-    <meta name="Join Us" content="Join us at STOVE" />
+    <title>Career</title>
+    <meta name="description" content="Join us at STOVE" />
     <meta property="og:title" content={ogData.title} />
     <meta property="og:description" content={ogData.description} />
     <meta property="og:url" content={ogData.url} />

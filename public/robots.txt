@@ -1,0 +1,3 @@
+# https://www.robotstxt.org/robotstxt.html
+user-agent : *
+disallow: /blog/stove/admin/234813649

@@ -4,7 +4,7 @@ import  TextTransition ,{presets} from "react-text-transition"
 import ScanToDownload from "./scantodownload";
 export default function Hero() {
   const [count, setCount] = useState(1)
-   const TEXTS : string[] = ["everything gas delivery", "e-commerce", "shipping","bill payment", "flights and hotel", "waste disposal"]
+   const TEXTS : string[] = ["Gasoline delivery", "E-commerce", "Shipping","Bill payment", "Flights and Hotel", "Waste Disposal"]
     
     useEffect(() => {
          const inter = setInterval(() => {

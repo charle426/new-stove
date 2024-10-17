@@ -81,6 +81,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#first"))}
             >
               <img
+              loading="lazy"
                 src={fuelRefill}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
@@ -92,6 +93,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#second"))}
             >
               <img
+              loading="lazy"
                 src={engineOil}
                 alt="icon"
                 className="max-w-[80px] md:max-w-[100px] w-full"
@@ -103,6 +105,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#third"))}
             >
               <img
+              loading="lazy"
                 src={wash}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
@@ -114,6 +117,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#four"))}
             >
               <img
+              loading="lazy"
                 src={shipping_img}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[80px]"
@@ -125,6 +129,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#five"))}
             >
               <img
+              loading="lazy"
                 src={insurance}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
@@ -136,6 +141,7 @@ export function Services() {
               onClick={() => handleScroll(document.querySelector("#six"))}
             >
               <img
+              loading="lazy"
                 src={rescue}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
@@ -182,6 +188,7 @@ export function EmergenceServices() {
               onClick={() => handleScroll(document.querySelector("#emergenceFirst"))}
             >
               <img
+              loading="lazy"
                 src={emergenceFuel}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
@@ -193,6 +200,7 @@ export function EmergenceServices() {
               onClick={() => handleScroll(document.querySelector("#emergenceSecond"))}
             >
               <img
+              loading="lazy"
                 src={emergenceTyre}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"
@@ -204,6 +212,7 @@ export function EmergenceServices() {
               onClick={() => handleScroll(document.querySelector("#emergenceThird"))}
             >
               <img
+              loading="lazy"
                 src={emergenceBattery}
                 alt="icon"
                 className="max-w-[60px] md:max-w-[100px]"

@@ -52,7 +52,7 @@ export default function AdminLogin(props : Props) {
     <section className="my-20 p-5">
       <div className="flex justify-center rounded-xl items-center flex-col gap-10 w-full">
         <div className="items-center justify-center h-[100px] w-[100px] p-7 rounded-full bg-white origin-center">
-          <img src={logo} alt="logo" className="md:w-[200px] w-[140px]" />
+          <img src={logo} alt="logo" loading="lazy" className="md:w-[200px] w-[140px]" />
         </div>
         <form
           onSubmit={handleSubmit}

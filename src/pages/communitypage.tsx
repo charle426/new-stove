@@ -2,12 +2,38 @@ import bg from "../assets/hero-img_esg_desktop.jpeg"
 import blob from "../assets/blob-blur.svg";
 import { Button } from "@/components/ui/button";
 import { BlogSome } from "./blog";
+import { Helmet } from "react-helmet";
 export default function Community() {
    const style = {
      backgroundImage: `url(${bg})`,
-   };
+  };
+  
+  const ogData = {
+    title: "community",
+    description:
+      " We’re working towards building and preserving a better world",
+    url: "https://www.nstve.netlify.app",
+    image: "../assets/stovelogo.png",
+    siteName: "Stove",
+  };
+  const canonicalUrl = "/community";
+
     return (
       <main className="overflow-hidden w-full">
+        <Helmet>
+          <title>Community</title>
+          <meta
+            name="description"
+            content="We are dedicated to reducing energy use & combatting climate
+                change head on"
+          />
+          <meta property="og:title" content={ogData.title} />
+          <meta property="og:description" content={ogData.description} />
+          <meta property="og:url" content={ogData.url} />
+          <meta property="og:image" content={ogData.image} />
+          <meta property="og:site_name" content={ogData.siteName} />
+          <link rel="canonical" href={canonicalUrl} />
+        </Helmet>
         <div
           style={style}
           id="partnershipHero"
@@ -74,7 +100,7 @@ export default function Community() {
               </div>
             </div>
           </div>
-          <BlogSome/>
+          <BlogSome />
         </section>
         <div className="pb-10">
           <div className="py-10 bg-deep dark:bg-primary px-2 flex flex-col md:flex-row justify-between">
@@ -83,9 +109,9 @@ export default function Community() {
                 Our environmental commitment knows no borders
               </h3>
               <p className="max-w-[700px] text-center text-xl">
-                STOVE's environmental, social and governance commitment continues
-                to cross borders in an effort to build a more sustainable global
-                future
+                STOVE's environmental, social and governance commitment
+                continues to cross borders in an effort to build a more
+                sustainable global future
               </p>
               <div>
                 <a href="https://www.stv.afrimol.com.ng/register.php">

@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
-import { lazy } from "react";
-const ScanToDownload = lazy(() => import("@/stove components/scantodownload"));
+import ScanToDownload from "@/stove components/scantodownload";
 import { useEffect, useState } from "react"
 import TextTransition, {presets } from "react-text-transition"
 import bizWomen from "../assets/bizwomen.png"
@@ -24,19 +23,19 @@ export default function BillPayment() {
     }, [count])
   
   const ogData = {
-    title: "About",
+    title: "Pay bills seamlessly",
     description: "Pay your utility bills in a Click",
     url: "https://www.nstve.netlify.app",
     image: "../assets/stovelogo.png",
     siteName: "Stove",
   };
-  const canonicalUrl = "https://www.nstve.netlify.app";
+  const canonicalUrl = "/bill-payments";
   
   return (
     <main>
       <Helmet>
     <title>About Us</title>
-    <meta name="About Us" content="Pay all your bills conveniently in the comfort of your home" />
+    <meta name="description" content="Pay all your bills conveniently in the comfort of your home" />
     <meta property="og:title" content={ogData.title} />
     <meta property="og:description" content={ogData.description} />
     <meta property="og:url" content={ogData.url} />

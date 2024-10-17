@@ -27,14 +27,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
-            <Route path="petroleum-delivery" element={<PetroleumPage />} />
+            <Route path="refill" element={<PetroleumPage />} />
             <Route path="community" element={<Community />} />
             <Route path="waste-disposal" element={<WastePage />} />
             <Route path="shipping" element={<Shipping />} />
             <Route path="bill-payments" element={<BillPayment />} />
             <Route path="careers" element={<Careers />} />
             <Route path="fleet-delivery" element={<FleetPage />} />
-            <Route path="investment" element={<PartnerShipPage />} />
+            <Route path="business" element={<PartnerShipPage />} />
             <Route path="emergency-services" element={<RescuePage />} />
             <Route path="about-us" element={<AboutPage />} />
             <Route path="blog" element={<BlogPage />} />
