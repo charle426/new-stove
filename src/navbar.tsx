@@ -114,7 +114,7 @@ export default function Navbar() {
                   Bill Payments
                 </NavLink>
                 <NavLink
-                  to="emergence-services"
+                  to="emergency-services"
                   className={({ isActive }) =>
                     !isActive
                       ? "text-destructive duration-300 hover:opacity-75 font-medium text-[0.9rem]"
