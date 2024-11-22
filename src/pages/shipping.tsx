@@ -263,7 +263,7 @@ export default function Shipping() {
                 Schedule your effortless delivery for exceptional service
               </h3>
               <div>
-                <a href="https://www.stv.afrimol.com.ng/register.php">
+                <a href="https://stove.com.ng/register.php">
                   <Button
                     className="dark:text-accent-foreground rounded-xl"
                     variant={"secondary"}

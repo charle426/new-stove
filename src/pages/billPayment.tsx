@@ -133,7 +133,7 @@ export default function BillPayment() {
             <div className="pb-3 text-deep text-4xl font-medium">
               Get started with seamless transactions anytime
               <div className="mt-3">
-                <a href="https://www.stv.afrimol.com.ng/register.php">
+                <a href="https://stove.com.ng/register.php">
                   <Button className="dark:text-accent-foreground">
                     Get Started
                   </Button>
@@ -176,7 +176,7 @@ export default function BillPayment() {
                 Download the STOVE app or continue on{" "}
                 <span>
                   <a
-                    href="https://www.stv.afrimol.com.ng/register.php"
+                    href="https://stove.com.ng/register.php"
                     className="underline visited:text-slate-700 visited:dark:text-accent text-primary"
                   >
                     web
@@ -212,7 +212,7 @@ export default function BillPayment() {
               No Hidden Fees
             </h3>
             <div>
-              <a href="https://www.stv.afrimol.com.ng/register.php">
+              <a href="https://stove.com.ng/register.php">
                 <Button
                   className="dark:text-accent-foreground rounded-xl"
                   variant={"secondary"}

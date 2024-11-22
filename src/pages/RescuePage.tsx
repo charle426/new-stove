@@ -142,7 +142,7 @@ export default function RescuePage() {
                 Keep you moving, even in the most difficult times
               </h3>
               <div>
-                <a href="https://www.stv.afrimol.com.ng/register.php">
+                <a href="https://stove.com.ng/register.php">
                   <Button
                     className="dark:text-accent-foreground rounded-xl"
                     variant={"secondary"}

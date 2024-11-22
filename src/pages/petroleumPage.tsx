@@ -252,7 +252,7 @@ export default function PetroleumPage() {
               Download the STOVE app or continue on{" "}
               <span>
                 <a
-                  href="https://www.stv.afrimol.com.ng/register.php"
+                  href="https://stove.com.ng/register.php"
                   className="underline visited:text-slate-700 visited:dark:text-slate-300 text-primary"
                 >
                   web

@@ -114,7 +114,7 @@ export default function Community() {
                 sustainable global future
               </p>
               <div>
-                <a href="https://www.stv.afrimol.com.ng/register.php">
+                <a href="https://stove.com.ng/register.php">
                   <Button
                     className="dark:text-accent-foreground rounded-xl"
                     variant={"secondary"}
