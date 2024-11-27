@@ -9,7 +9,7 @@ export default function Shipping() {
   const ogData = {
     title: "shipping",
     description: "Lets manage your shipments from one destination to another",
-    url: "https://www.nstve.netlify.app",
+    url: "https://stove.com.ng",
     image: "../assets/stovelogo.png",
     siteName: "Stove",
   };
