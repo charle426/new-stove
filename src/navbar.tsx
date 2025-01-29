@@ -81,7 +81,7 @@ export default function Navbar() {
                       : "hover:text-primary font-medium text-[0.9rem]"
                   }
                 >
-                  Get A Refill 
+                  Get A Refill
                 </NavLink>
                 <NavLink
                   to="waste-disposal"
@@ -207,9 +207,11 @@ export default function Navbar() {
           </NavigationMenuList>
           <NavigationMenuList className="lg:ml-12 ml-4 gap-2 md:gap-0 flex justify-start md:justify-end">
             <NavigationMenuItem>
-                <a href="https://stove.com.ng/register.php"
+              <a
+                href="https://stove.com.ng/register.php"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="duration-300 hover:opacity-75 font-medium text-[0.9rem]"
-                
               >
                 Create Account
               </a>

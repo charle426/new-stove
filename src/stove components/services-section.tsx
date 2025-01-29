@@ -34,7 +34,8 @@ export function Services() {
   
   
   function displayThis() {
-    if (fuelInView) {      return Fuel({
+    if (fuelInView) {     
+       return Fuel({
         classString:
           "inview py-6 md:py-12 px-3 md:px-10 rounded-[50px] gradBg flex flex-col md-flex-row w-full",
         src: fuelRefill,
@@ -77,7 +78,7 @@ export function Services() {
         <div className="sticky w-full left-0 md:top-20 top-10">
           <div className="flex flex-wrap items-center justify-center basis-[200px] w-full *:hover: *:shadow-lg *:overflow-hidden p-2 *:font-medium gap-5 *:rounded-lg">
             <div
-              className="flex py-2 px-3 flex-col items-center justify-center  bg-accent"
+              className={!fuelInView ? "flex py-2 px-3 flex-col items-center justify-center duration-300 bg-accent" : "flex py-2 px-3 flex-col items-center justify-center sectionScoll bg-primary shadow-primary shadow-xl duration-300 text-white"}
               onClick={() => handleScroll(document.querySelector("#first"))}
             >
               <img
@@ -89,7 +90,7 @@ export function Services() {
               <p className="text-[0.8rem]">Gasoline</p>
             </div>
             <div
-              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
+              className={!engineInView ? "py-2 px-3 flex flex-col items-center justify-center duration-300 bg-accent" : "py-2 px-3 flex flex-col items-center justify-center sectionScoll bg-primary shadow-primary shadow-xl duration-300 text-white"}
               onClick={() => handleScroll(document.querySelector("#second"))}
             >
               <img
@@ -101,7 +102,7 @@ export function Services() {
               <p className="text-[0.8rem]">Pay Bills</p>
             </div>
             <div
-              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
+              className={!carInView ? "py-2 px-3 flex flex-col items-center justify-center duration-300 bg-accent" : "py-2 px-3 flex flex-col items-center justify-center sectionScoll bg-primary shadow-primary shadow-xl duration-300 text-white"}
               onClick={() => handleScroll(document.querySelector("#third"))}
             >
               <img
@@ -113,7 +114,7 @@ export function Services() {
               <p className="text-[0.8rem]">Waste Disposal</p>
             </div>
             <div
-              className="flex flex-col items-center justify-center bg-accent py-2 px-3"
+              className={!tyreInView ? "flex flex-col items-center justify-center bg-accent duration-300 py-2 px-3" : "flex flex-col items-center justify-center sectionScoll bg-primary shadow-primary shadow-xl py-2 px-3 duration-300 text-white"}
               onClick={() => handleScroll(document.querySelector("#four"))}
             >
               <img
@@ -125,7 +126,7 @@ export function Services() {
               <p className="text-[0.8rem]">Shipping</p>
             </div>
             <div
-              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
+              className={!insuranceInView ? "py-2 px-3 flex flex-col items-center justify-center duration-300 bg-accent" : "py-2 px-3 flex flex-col items-center justify-center sectionScoll bg-primary shadow-primary shadow-xl duration-300 text-white"}
               onClick={() => handleScroll(document.querySelector("#five"))}
             >
               <img
@@ -137,7 +138,7 @@ export function Services() {
               <p className="text-[0.8rem]">Investment</p>
             </div>
             <div
-              className="py-2 px-3 flex flex-col items-center justify-center bg-accent"
+              className={!rescueInView ? "py-2 px-3 flex flex-col items-center justify-center duration-300 bg-accent shadow-primary" : "py-2 px-3 flex flex-col items-center justify-center sectionScoll bg-red-400 shadow-red-400 shadow-xl duration-300 text-white"}
               onClick={() => handleScroll(document.querySelector("#six"))}
             >
               <img

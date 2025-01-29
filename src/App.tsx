@@ -43,10 +43,7 @@ function App() {
               path="blog/stove/admin/234813649"
               element={<Admin adminAuth={adminAuth} />}
             />
-            <Route
-              path="blog/admin/edit/:id"
-              element={<Edit />}
-            />
+            <Route path="blog/admin/edit/:id" element={<Edit />} />
             <Route
               path="blog/admin/login"
               element={<AdminLogin setAdminAuth={setAdminAuth} />}
