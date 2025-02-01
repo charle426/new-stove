@@ -40,7 +40,7 @@ function Fuel(props: { classString: string; src: string }) {
     </div>
   );
 }
-function EngineOil(props: { classString: string; src: string }) {
+function PayBills(props: { classString: string; src: string }) {
   return (
     <div className="">
       <div
@@ -76,7 +76,7 @@ function EngineOil(props: { classString: string; src: string }) {
     </div>
   );
 }
-function CarWash(props: { classString: string; src: string }) {
+function Wastedisposal(props: { classString: string; src: string }) {
   return (
     <div className="">
       <div
@@ -114,7 +114,7 @@ function CarWash(props: { classString: string; src: string }) {
   );
 }
 
-function Tyre(props: { classString: string; src: string }) {
+function Shipping(props: { classString: string; src: string }) {
   return (
     <div className="">
       <div
@@ -167,7 +167,7 @@ function Insurance(props: { classString: string; src: string }) {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div>
             <h1 className="text-[2rem] font-semibold text-[#eeffef] md:text-[3.5rem]">
-              shop like never before.
+              Shop like never before.
             </h1>
             <p>
               Shop with ease and pay what you want, Stove Market Place is something you have never seen before.
@@ -340,4 +340,4 @@ function EmergenceBattery() {
   );
 }
 
-export { Fuel, EngineOil, CarWash, Tyre, Insurance, Rescue, EmergenceBattery, EmergenceFuel, EmergenceTyre };
+export { Fuel, PayBills, Shipping, Wastedisposal, Insurance, Rescue, EmergenceBattery, EmergenceFuel, EmergenceTyre };

@@ -50,7 +50,7 @@ export function Footer() {
           </ul>
           <ul>
             <li>
-              <NavLink to="petroleum-delivery">Gasoline Delivery</NavLink>
+              <NavLink to="refill">Gasoline Delivery</NavLink>
             </li>
             {/* <li>
               <NavLink to="partnership">Engine Oil Change</NavLink>

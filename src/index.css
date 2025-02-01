@@ -63,9 +63,22 @@
   }
 
   .stickyNav{
+      animation: popin 0.3s 0s 1;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+@keyframes popin {
+  from{
+    top: -10px;
+    opacity: 0.6;
+  }
+
+  to{
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 .hero-heading{
@@ -94,7 +107,7 @@
 .inview{
   animation: fadeIn 1s  0s 1;
   /* border-radius: 50px; */ 
-    background: linear-gradient(45deg,  #4154F1, hsl(240 4.8% 95.9%));
+    background: linear-gradient(45deg, hsl(234, 86%, 60%), hsl(240 4.8% 95.9%));
 }
 .rescue{
   animation: fadeIn 1s  0s 1;
@@ -143,4 +156,13 @@
 h1, h2,h3,h4,h5,h6{
   scroll-margin: 5rem;
   letter-spacing: -0.025em;
+}
+
+.cardsInview{
+  background: linear-gradient(45deg, hsl(234, 86%, 60%), hsl(240 4.8% 95.9%));
+    box-shadow: 2px 2px 5px hsl(var(--primary));
+}
+.rescueInview{
+  background: linear-gradient(45deg, hsl(0, 83%, 50%), hsl(240 4.8% 95.9%));
+    box-shadow: 2px 2px 5px hsl(var(--primary));
 }

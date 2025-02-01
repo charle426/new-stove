@@ -17,12 +17,12 @@ export default function GetTheApp() {
                   <p>Or start on the web</p>
                   <div className="flex gap-2 items-center">
                     <a href="https://stove.com.ng/register.php" target="_blank" rel="noopener noreferrer">
-                      <Button className="dark:text-accent-foreground">
+                      <Button className="dark:text-accent-foreground hover:bg-slate-500" variant={"default"}>
                         Register
                       </Button>
                     </a>
                     <a href="https://stove.com.ng/register.php" target="_blank" rel="noopener noreferrer">
-                      <Button className="dark:text-accent-foreground">
+                      <Button className="dark:text-accent-foreground hover:bg-slate-500" variant={"default"}>
                         Login
                       </Button>
                     </a>

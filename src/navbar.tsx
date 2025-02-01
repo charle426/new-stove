@@ -31,13 +31,16 @@ export default function Navbar() {
   window.addEventListener("resize", () => {
     setToggle(false)
   })
+   let prevScrollPosition = window.scrollY;
   window.addEventListener("scroll", () => {
     const currentScrollPosition = window.scrollY
 
-    if (currentScrollPosition > 300)
+    if (currentScrollPosition < prevScrollPosition)
     {
       ref.current?.classList.add("stickyNav")
     } else ref.current?.classList.remove("stickyNav")
+
+    prevScrollPosition = window.scrollY
     
   })
   return (
